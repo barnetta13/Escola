@@ -11,8 +11,8 @@ package impostos;
  */
 public class Reformado extends ContComRT{
     
-    private float taxaRT = 1;
-    private float taxaOT = 3;
+    private float taxaRT = 0.01f;
+    private float taxaOT = 0.03f;
 
     public Reformado(String nome, String morada, float outrosRendimentos, float rendimentoTrabalho)
     {
