@@ -12,13 +12,11 @@ package impostos;
 public abstract class Contribuinte {
     
     private String nome;
-    private String morada;
-    
+    private String morada;   
     private float outrosRendimentos;
     
     private static final String NOME_POR_OMISSAO = "N/A";
     private static final String MORADA_POR_OMISSAO = "N/A";
-    
     private static final float OUTROS_RENDIMENTOS_POR_OMISSAO = 0;
     
     
@@ -26,16 +24,14 @@ public abstract class Contribuinte {
     {
         this.nome = nome;
         this.morada = morada;
-        this.outrosRendimentos = outrosRendimentos;
-        
+        this.outrosRendimentos = outrosRendimentos;  
     }
     
     public Contribuinte()
     {
         this.nome = NOME_POR_OMISSAO;
         this.morada = MORADA_POR_OMISSAO;
-        this.outrosRendimentos = OUTROS_RENDIMENTOS_POR_OMISSAO;
-        
+        this.outrosRendimentos = OUTROS_RENDIMENTOS_POR_OMISSAO;    
     }
     
     @Override
@@ -46,44 +42,26 @@ public abstract class Contribuinte {
     
     public abstract float calculaImposto();
 
-    /**
-     * @return the nome
-     */
     public String getNome() {
         return nome;
     }
 
-    /**
-     * @param nome the nome to set
-     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    /**
-     * @return the morada
-     */
     public String getMorada() {
         return morada;
     }
 
-    /**
-     * @param morada the morada to set
-     */
     public void setMorada(String morada) {
         this.morada = morada;
     }
 
-    /**
-     * @return the outrosRendimentos
-     */
     public float getOutrosRendimentos() {
         return outrosRendimentos;
     }
-
-    /**
-     * @param outrosRendimentos the outrosRendimentos to set
-     */
+    
     public void setOutrosRendimentos(float outrosRendimentos) {
         this.outrosRendimentos = outrosRendimentos;
     }

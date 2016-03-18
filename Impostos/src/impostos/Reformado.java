@@ -11,7 +11,35 @@ package impostos;
  */
 public class Reformado extends ContComRT{
     
-    private static float taxaRT = 1;
-    private static float taxaOT = 3;
+    private float taxaRT = 1;
+    private float taxaOT = 3;
+
+    public Reformado(String nome, String morada, float outrosRendimentos, float rendimentoTrabalho)
+    {
+        super(nome,morada,outrosRendimentos,rendimentoTrabalho);
+    }
+    
+    public Reformado()
+    {
+        super();
+    }
+    
+    @Override
+    public float getTaxaRT() {
+        return taxaRT;
+    }
+
+    @Override
+    public float getTaxaOR() {
+        return taxaOT;
+    }
+
+    public void setTaxaRT(float taxaRT) {
+        this.taxaRT = taxaRT;
+    }
+
+    public void setTaxaOT(float taxaOT) {
+        this.taxaOT = taxaOT;
+    }
     
 }

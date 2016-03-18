@@ -29,13 +29,28 @@ public abstract class ContComRT extends Contribuinte {
         this.rendimentoTrabalho = RENDIMENTO_TRABALHO_POR_OMISSAO;
     }
     
-    @Override
-    public String toString()
-    {
-        return super.toString() + "Rendimentos Trabalho: " + rendimentoTrabalho;    
+    public float getRendimentoTrabalho() {
+        return rendimentoTrabalho;
+    }
+
+    public void setRendimentoTrabalho(float rendimentoTrabalho) {
+        this.rendimentoTrabalho = rendimentoTrabalho;
     }
     
     @Override
-    public abstract float calculaImposto();
+    public String toString()
+    {
+        return super.toString() + "\nRendimentos Trabalho: " + getRendimentoTrabalho();    
+    }
     
+    @Override
+    public float calculaImposto()
+    {
+        float impostoRT = rendimentoTrabalho * getTaxaRT();
+        float impostoOR = getOutrosRendimentos() * getTaxaOR();
+        return impostoRT + impostoOR ;
+    };
+
+    public abstract float getTaxaRT();
+    public abstract float getTaxaOR();
 }
